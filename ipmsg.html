@@ -56,4 +56,20 @@ function write() {
 function inc() {
   $("span")[letter_count].innerHTML = word[letter_count];
   $("span:eq("+letter_count+")").addClass("glow");
+  letter_count++;
+  if (letter_count >= word.length) {
+    finished = true;
+    setTimeout(reset, 1500);
+  } else {
+    setTimeout(inc, 1000);
+  }
+}
+
+function reset() {
+  letter_count = 0;
+  finished = false;
+  setTimeout(inc, 1000);
+  setTimeout(write, 75);
+  $("span").removeClass("glow");
+}
 </script>
