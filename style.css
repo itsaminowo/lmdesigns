@@ -1,0 +1,186 @@
+/* CSS Variables for easy theme management */
+:root {
+    --primary-color: hotpink; /* HotLink */
+    --secondary-color: limegreen; /* LimeGreen */
+    --background-gradient: linear-gradient(135deg, hotpink, limegreen); /* Pink-green gradient */
+    --card-background: rgba(46, 46, 46, 0.9); /* Darker card background with transparency */
+    --text-color: #ffffff; /* White text */
+    --button-hover: limegreen; /* Limegreen to maintain consistency */       
+    --placeholder-color: #b0b0b0; /* Light gray for placeholder */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--background-gradient);
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    color: var(--text-color); /* White text */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full height */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+img {
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+               linear-gradient(-135deg, hotpink, limegreen) border-box;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    width: 100%;
+    margin-top: 15px;
+    max-height: 300px;
+    max-width: 300px;
+     }
+
+.ai-text-theme {
+        background: linear-gradient(135deg, #EEAC4B, #E77B58, #E95568, #D28FE8, #91A7F7, #6CB2F5);    
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;            
+    }
+
+.lm-text-theme {
+        background: linear-gradient(135deg, hotpink, limegreen);    
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;            
+    }
+
+a {
+        background: linear-gradient(-135deg, #FFDF00, #FFFFFF);    
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        text-decoration: none;  
+    }
+
+hr {
+    background-image: linear-gradient(135deg, hotpink, limegreen);
+    border: 0;
+    height: 2px;
+    border-radius: 8px;
+    margin-top: 15px; 
+    margin-bottom: 15px;
+    }
+
+.container {
+    background: var(--card-background);
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    background: linear-gradient(-135deg, hotpink, limegreen);    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+    margin-bottom: 15px;
+    margin-top: 0px;
+    font-size: 2em;
+    animation: slideDown 0.5s ease-out;
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    background: linear-gradient(#3e3e3e, #3e3e3e) padding-box,
+               linear-gradient(-135deg, hotpink, limegreen) border-box;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    resize: none;
+    font-size: 1em;
+    color: var(--text-color); /* White text */
+    background-color: #3e3e3e; /* Dark textarea */
+    transition: background 0.3s;
+}
+
+input::placeholder {
+    color: var(--placeholder-color); /* Light gray for placeholder */
+}
+
+input:focus {
+    background: linear-gradient(#3e3e3e, #3e3e3e) padding-box,
+              linear-gradient(135deg, hotpink, limegreen) border-box;
+    outline: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-20px); opacity: 0; }
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    background-image: var(--background-gradient);
+    border: none;
+    border-radius: 8px;
+    color: var(--text-color); /* White text */
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-image 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-image: linear-gradient(215deg, hotpink, limegreen);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.detail {
+     margin-top: 15px;
+}
+
+/* Styles for the rest of the elements */
+.info-section {
+    margin-top: 15px;
+}
+
+.copyright {
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
