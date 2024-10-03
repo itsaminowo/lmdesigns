@@ -42,12 +42,6 @@ img {
     max-width: 300px;
      }
 
-.ai-text-theme {
-        background: linear-gradient(135deg, #EEAC4B, #E77B58, #E95568, #D28FE8, #91A7F7, #6CB2F5);    
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;            
-    }
-
 .lm-text-theme {
         background: linear-gradient(135deg, hotpink, limegreen);    
         -webkit-background-clip: text;
