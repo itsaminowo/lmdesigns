@@ -26,8 +26,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Ensure full height */
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 img {
